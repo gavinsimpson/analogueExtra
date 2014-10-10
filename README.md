@@ -14,7 +14,7 @@ Linux       | Windows
 Bug reports and feature requests should be filed as [issues](https://github.com/gavinsimpson/analogueExtra/issues).
 
 ## Licence
-analogue is released under the [GNU General Public Licence Version 2](http://www.gnu.org/licenses/gpl-2.0.html).
+**analogueExtra** is released under the [GNU General Public Licence Version 2](http://www.gnu.org/licenses/gpl-2.0.html).
 
 ## Links
 
