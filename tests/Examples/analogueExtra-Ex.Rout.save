@@ -1,0 +1,111 @@
+
+R version 3.1.1 Patched (2014-08-21 r66455) -- "Sock it to Me"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "analogueExtra"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> library('analogueExtra')
+Loading required package: vegan3d
+Loading required package: vegan
+Loading required package: permute
+Loading required package: lattice
+This is vegan 2.0-10
+
+Attaching package: ‘vegan3d’
+
+The following objects are masked from ‘package:vegan’:
+
+    ordiplot3d, ordirgl, orglpoints, orglsegments, orgltext,
+    rgl.isomap, rgl.renyiaccum
+
+Loading required package: analogue
+This is analogue 0.14-0
+
+Attaching package: ‘analogueExtra’
+
+The following object is masked from ‘package:analogue’:
+
+    plot3d.prcurve
+
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("plot3d.prcurve")
+> ### * plot3d.prcurve
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot3d.prcurve
+> ### Title: Interactive 3D plot of a principal curve in principal coordinate
+> ###   space
+> ### Aliases: plot3d.prcurve plot3d
+> ### Keywords: dynamic graphics
+> 
+> ### ** Examples
+> 
+> ## Only works if the analogue package is available
+> if (require("analogue")) {
++     ## Load the Abernethy Forest late glacial pollen sequence
++     data(abernethy)
++ 
++     ## Remove the Depth and Age variables
++     abernethy2 <- abernethy[, -(37:38)]
++ 
++     ## Fit the principal curve using the median complexity over
++     ## all species
++     aber.pc <- prcurve(abernethy2, method = "ca", trace = TRUE,
++                        vary = FALSE, penalty = 1.4)
++ 
++     ## 3D plot of data with curve superimposed
++     ## plot3d.prcurve(aber.pc) # now deprecated, instead use
++     plot3d(aber.pc)
++ }
+
+   Determining initial DFs for each variable...
+  |                                                                              |                                                                      |   0%  |                                                                              |==                                                                    |   3%  |                                                                              |====                                                                  |   6%  |                                                                              |======                                                                |   8%  |                                                                              |========                                                              |  11%  |                                                                              |==========                                                            |  14%  |                                                                              |============                                                          |  17%  |                                                                              |==============                                                        |  19%  |                                                                              |================                                                      |  22%  |                                                                              |==================                                                    |  25%  |                                                                              |===================                                                   |  28%  |                                                                              |=====================                                                 |  31%  |                                                                              |=======================                                               |  33%  |                                                                              |=========================                                             |  36%  |                                                                              |===========================                                           |  39%  |                                                                              |=============================                                         |  42%  |                                                                              |===============================                                       |  44%  |                                                                              |=================================                                     |  47%  |                                                                              |===================================                                   |  50%  |                                                                              |=====================================                                 |  53%  |                                                                              |=======================================                               |  56%  |                                                                              |=========================================                             |  58%  |                                                                              |===========================================                           |  61%  |                                                                              |=============================================                         |  64%  |                                                                              |===============================================                       |  67%  |                                                                              |=================================================                     |  69%  |                                                                              |===================================================                   |  72%  |                                                                              |====================================================                  |  75%  |                                                                              |======================================================                |  78%  |                                                                              |========================================================              |  81%  |                                                                              |==========================================================            |  83%  |                                                                              |============================================================          |  86%  |                                                                              |==============================================================        |  89%  |                                                                              |================================================================      |  92%  |                                                                              |==================================================================    |  94%  |                                                                              |====================================================================  |  97%  |                                                                              |======================================================================| 100%
+
+
+Fitting Principal Curve:
+
+Initial curve: d.sq: 103233.450
+Iteration   1: d.sq: 4853.791
+Iteration   2: d.sq: 5013.497
+Iteration   3: d.sq: 5109.973
+Iteration   4: d.sq: 5135.654
+Iteration   5: d.sq: 5137.944
+
+PC Converged in 5 iterations.
+
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  5.345 0.195 5.62 0 0.003 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')
