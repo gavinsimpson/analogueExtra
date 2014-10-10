@@ -1,0 +1,20 @@
+Package: analogueExtra
+Type: Package
+Title: Analogue and weighted averaging methods for palaeoecology
+Version: 0.1-0
+Date: 10 Oct 2014
+Depends: vegan3d (>= 0.65-0), analogue (>= 0.14-0)
+Imports: rgl
+Suggests: testthat
+Authors@R: c(person(given = c("Gavin", "L."), family = "Simpson",
+                    role = c("aut", "cre"),
+                    email = "ucfagls@gmail.com"))
+Maintainer: Gavin L. Simpson <ucfagls@gmail.com>
+BugReports: https://github.com/gavinsimpson/analogueExtra/issues
+NeedsCompilation: yes
+Description: Fits Modern Analogue Technique and Weighted Averaging transfer 
+  	     function models for prediction of environmental data from species 
+	     data, and related methods used in palaeoecology.
+License: GPL-2
+ByteCompile: true
+URL: https://github.com/gavinsimpson/analogueExtra

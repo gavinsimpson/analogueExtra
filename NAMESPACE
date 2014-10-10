@@ -1,0 +1,21 @@
+## Imports
+##
+## analogue as it is in Depends
+import(analogue)
+## vegan3d
+importFrom(vegan3d,
+           ordirgl)
+## rgl
+importFrom(rgl,
+           plot3d,
+           lines3d,
+           decorate3d)
+
+## Exports
+export(plot3d,
+       plot3d.prcurve)
+
+### S3 Methods
+##
+## main user-visible functions
+S3method(plot3d, prcurve)
