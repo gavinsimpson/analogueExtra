@@ -2,8 +2,8 @@ Package: analogueExtra
 Type: Package
 Title: Analogue and weighted averaging methods for palaeoecology
 Version: 0.1-0
-Date: 10 Oct 2014
-Depends: vegan3d (>= 0.65-0), analogue (>= 0.14-0)
+Date: 18 Nov 2014
+Depends: vegan3d (>= 0.65-0), analogue (>= 0.16-0)
 Imports: rgl
 Suggests: testthat
 Authors@R: c(person(given = c("Gavin", "L."), family = "Simpson",
