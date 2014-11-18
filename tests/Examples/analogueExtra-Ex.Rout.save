@@ -25,24 +25,9 @@ Loading required package: vegan3d
 Loading required package: vegan
 Loading required package: permute
 Loading required package: lattice
-This is vegan 2.0-10
-
-Attaching package: ‘vegan3d’
-
-The following objects are masked from ‘package:vegan’:
-
-    ordiplot3d, ordirgl, orglpoints, orglsegments, orgltext,
-    rgl.isomap, rgl.renyiaccum
-
+This is vegan 2.2-0
 Loading required package: analogue
-This is analogue 0.14-0
-
-Attaching package: ‘analogueExtra’
-
-The following object is masked from ‘package:analogue’:
-
-    plot3d.prcurve
-
+This is analogue 0.16-0
 > 
 > base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
 > cleanEx()
@@ -99,7 +84,7 @@ PC Converged in 5 iterations.
 > ###
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  5.345 0.195 5.62 0 0.003 
+Time elapsed:  5.496 0.194 5.783 0 0.004 
 > grDevices::dev.off()
 null device 
           1 
