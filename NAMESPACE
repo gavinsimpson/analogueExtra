@@ -2,14 +2,15 @@
 ##
 ## analogue as it is in Depends
 import(analogue)
+
 ## vegan3d
-importFrom(vegan3d,
-           ordirgl)
+importFrom("vegan3d", "ordirgl")
+
 ## rgl
-importFrom(rgl,
-           plot3d,
-           lines3d,
-           decorate3d)
+importFrom("rgl", "plot3d", "lines3d", "decorate3d")
+
+## Imports from R base packages
+importFrom("stats", "predict")          # uses the predict S3 generic
 
 ## Exports
 export(plot3d,
