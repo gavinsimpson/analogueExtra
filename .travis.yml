@@ -12,6 +12,7 @@ addons:
   apt:
     packages:
       - qpdf
+      - xvfb
       
 services:
   - xvfb
