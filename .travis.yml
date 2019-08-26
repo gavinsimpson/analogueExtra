@@ -15,10 +15,11 @@ addons:
       
 services:
   - xvfb
-  
-r_packages:
-  - vegan
+
+r_binary_packages:
   - vegan3d
+  - rgl
+  - vegan
   - analogue
 
 r_github_packages:
