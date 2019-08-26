@@ -23,12 +23,6 @@ r_binary_packages:
   - vegan
   - analogue
 
-r_github_packages:
-  - r-lib/covr
-
-after_success:
-  - Rscript -e 'covr::codecov()'
-
 r_build_args: " --compact-vignettes=gs+qpdf"
 
 notifications:
