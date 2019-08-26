@@ -1,19 +1,22 @@
 Package: analogueExtra
 Type: Package
-Title: Additional Functions for Use with the Analogue Package
-Version: 0.1-1
-Date: 2016-04-09
+Title: Additional Functions for Use with the 'analogue' Package
+Version: 0.1-2
+Date: 2019-08-26
 Depends: vegan3d (>= 0.65-0), analogue (>= 0.16-0)
 Imports: rgl
 Suggests: testthat
 Authors@R: c(person(given = c("Gavin", "L."), family = "Simpson",
-                    role = c("aut", "cre"),
-                    email = "ucfagls@gmail.com"))
+             	    role = c("aut", "cre"),
+                    email = "ucfagls@gmail.com",
+	            comment = c(ORCID = "0000-0002-9084-8413")))
 Maintainer: Gavin L. Simpson <ucfagls@gmail.com>
 BugReports: https://github.com/gavinsimpson/analogueExtra/issues
-NeedsCompilation: yes
+NeedsCompilation: no
 Description: Provides additional functionality for the analogue package
 	     that is not required by all users of the main package.
 License: GPL-2
 ByteCompile: true
 URL: https://github.com/gavinsimpson/analogueExtra
+LazyData: true
+Encoding: UTF-8
