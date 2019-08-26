@@ -1,6 +1,6 @@
 
-R version 3.2.4 Patched (2016-03-16 r70339) -- "Very Secure Dishes"
-Copyright (C) 2016 The R Foundation for Statistical Computing
+R version 3.6.1 Patched (2019-07-17 r76848) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -25,11 +25,12 @@ Loading required package: vegan3d
 Loading required package: vegan
 Loading required package: permute
 Loading required package: lattice
-This is vegan 2.3-5
+This is vegan 2.5-5
 Loading required package: analogue
-analogue version 0.17-0
+analogue version 0.17-3
 > 
 > base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
 > cleanEx()
 > nameEx("plot3d.prcurve")
 > ### * plot3d.prcurve
@@ -71,8 +72,8 @@ Fitting Principal Curve:
 Initial curve: d.sq: 103233.450
 Iteration   1: d.sq: 4853.791
 Iteration   2: d.sq: 5013.497
-Iteration   3: d.sq: 5109.973
-Iteration   4: d.sq: 5135.654
+Iteration   3: d.sq: 5109.972
+Iteration   4: d.sq: 5135.655
 Iteration   5: d.sq: 5137.944
 
 PC Converged in 5 iterations.
@@ -82,9 +83,10 @@ PC Converged in 5 iterations.
 > 
 > ### * <FOOTER>
 > ###
+> cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  2.619 0.072 2.84 0 0.002 
+Time elapsed:  4.291 0.16 4.71 0.002 0.004 
 > grDevices::dev.off()
 null device 
           1 
