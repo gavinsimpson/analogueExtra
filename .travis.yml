@@ -1,33 +1,35 @@
-# Sample .travis.yml for R projects.
-#
-# See README.md for instructions, or for more configuration options,
-# see the wiki:
-#   https://github.com/craigcitro/r-travis/wiki
+language: r
+cache: packages
 
-language: c
+matrix:
+  include:
+  - r: devel
+  - r: release
 
-before_install:
-  - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
-  - chmod 755 ./travis-tool.sh
-  - ./travis-tool.sh bootstrap
-  - "export DISPLAY=:99.0" 
-  - "sh -e /etc/init.d/xvfb start"
+sudo: false
 
-install:
-  - ./travis-tool.sh install_deps
-script: ./travis-tool.sh run_tests
+addons:
+  apt:
+    packages:
+      - qpdf
+      
+services:
+  - xvfb
+  
+r_packages:
+  - vegan
+  - vegan3d
+  - analogue
 
-after_script:
-  - ./travis-tool.sh dump_logs
+r_github_packages:
+  - r-lib/covr
+
+after_success:
+  - Rscript -e 'covr::codecov()'
+
+r_build_args: " --compact-vignettes=gs+qpdf"
 
 notifications:
   email:
     on_success: change
-    on_failure: change
-
-env:
-   global:
-     - CRAN: http://cran.rstudio.com
-     - R_BUILD_ARGS=" --compact-vignettes=gs+qpdf" 
-     - R_CHECK_ARGS="--as-cran"
-     - BOOTSTRAP_LATEX="1"
+    on_failure: always
